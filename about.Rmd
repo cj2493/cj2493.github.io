@@ -1,5 +1,7 @@
 ---
 title: "About"
+editor_options: 
+  chunk_output_type: console
 ---
 
 ### About this site
