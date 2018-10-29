@@ -1,16 +1,8 @@
 ---
-title: "Holy cow!"
+title: "Courtney Johnson"
 editor_options:
   chunk_output_type: console
 ---
-
-### I have a webpage!
-
-And I can put all kinds of stuff on it!
-
-I can add additional text.
-
-I *could* write some code but I'm not going to.
 
 
 ### Add some links
@@ -19,10 +11,6 @@ I like [google](https://www.google.com)
 
 I can link directly to my [about page](about.html).
 
-
-### Pictures
-
-<img src="images/image.png" style="width:75%"> 
 
 ### I can add code
 
