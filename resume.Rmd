@@ -1,0 +1,62 @@
+---
+title: "Resume"
+editor_options: 
+  chunk_output_type: console
+---
+
+
+### Education
+
+* Columbia University, Mailman School of Public Health
+
+    * Master of Science in Biostatistics
+
+    * Expected Graduation: May 2020
+
+
+* Arizona State University
+
+    * Bachelors of Science in Mathematics and Statistics, Summa Cum Laude
+
+    * May 2018
+
+    * Awards: Dean's List, New American University President's Award, Moeur Award
+
+    * Honors Thesis: Exploring Cultural Differences in BMI Curves Using NHANES
+
+
+### Experience
+
+* Graduate Researcher
+
+    * Arizona State University, School of Human Evolution and Social Change
+
+    * June 2018-August 2018
+
+
+* Summer Intern
+
+    * National Institutes of Health, Clinical Center, Office of Patient Recruitment
+
+    * June 2017-August 2017
+
+
+* Junior SAS Programmer/Assistant
+
+    * Western Alliance Bank
+
+    * March 2017-March 2018
+
+
+* Online Subject Tutor
+
+    * ASU University Academic Success Programs*
+
+    * August 2016-March 2017
+
+
+* Research Student
+
+    * Columbia Summer Institute for Training In Biostatistics
+
+    * May 2016-July 2016

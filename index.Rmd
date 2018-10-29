@@ -5,13 +5,6 @@ editor_options:
 ---
 
 
-### Add some links
-
-I like [google](https://www.google.com)
-
-I can link directly to my [about page](about.html).
-
-
 ### I can add code
 
 My code page is [here](code.html)
