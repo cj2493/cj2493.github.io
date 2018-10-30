@@ -4,8 +4,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-### About this site
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+This site was created through R Markdown and is hosted on github.
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+The data used for the flex dashboard was collected on airbnb rentals in New York City. The data was subset to rentals that had a rating and had prices between \$100 and \$500 per night.

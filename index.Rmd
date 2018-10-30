@@ -4,7 +4,10 @@ editor_options:
   chunk_output_type: console
 ---
 
+<img src = "images/headshot.png" style = "width:45%">
 
-### I can add code
+I am currently a graduate student in Biostatistics at the Mailman School of Public Health of Columbia University.
 
-My code page is [here](code.html)
+This site includes links to my resume, LinkedIn profile, github account, email, as well as a flex dashboard created for a Data Science class.
+
+My flex dashboard is [here](code.html).
