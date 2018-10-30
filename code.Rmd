@@ -2,17 +2,49 @@
 title: "code"
 author: "Courtney Johnson"
 date: "October 18, 2018"
-output: html_document
-editor_options: 
-  chunk_output_type: console
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(p8105.datasets)
+library(viridis)
+library(plotly)
 ```
 
+
+Import and tidy data
+
 ```{r}
-library(tidyverse)
+
+```
+
+Column{data-width = 500}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+
+```
+
+Column{data-width = 500}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+
+```
+
+### Chart C
+
+```{r}
 
 ```
 
