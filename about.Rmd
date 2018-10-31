@@ -7,3 +7,4 @@ editor_options:
 
 This site was created through R Markdown and is hosted on github.
 
+The data used on the flex dashboard is from the National Oceanic and Atmospheric Association (NOAA). It contains information on the weather collected from stations in New York from 1981-2010. The data includes variables of weather station ID, date, minimum temperature, maximum temperature, precipitation, snowfall, and snow depth.

@@ -20,30 +20,63 @@ library(plotly)
 
 ```{r, echo = FALSE}
 ny_noaa = read_csv("./data/nynoaadat.csv") 
-
+ny_noaa = ny_noaa %>%
+  janitor::clean_names() %>%
+  separate(date, into = c("year", "month", "day"), sep = "-") %>%
+  mutate(year = as.numeric(year), 
+         month = as.numeric(month), 
+         day = as.numeric(day), 
+         tmax = as.numeric(tmax)/10, 
+         tmin = as.numeric(tmin)/10,
+         prcp = prcp/10
+         )
+ny_noaa = ny_noaa %>%
+  filter(!is.na(prcp),
+         !is.na(snow),
+         !is.na(snwd),
+         !is.na(tmin),
+         !is.na(tmax))
 ```
 
 Column{data-width = 500}
 -----------------------------------------------------------------------
 
-### Chart A
+### Average Minimum Temperature in December in New York
 
 ```{r, echo = FALSE}
-
+ny_noaa %>%
+  filter(month == 12) %>%
+  group_by(year) %>%
+  summarize(mean_tmin = mean(tmin)) %>%
+  plot_ly(x = ~year, y = ~mean_tmin, type = "scatter", mode = "markers", 
+          alpha = 0.5) %>%
+  layout(xaxis = list(title = "Year"), yaxis = list(title = "Temperature (Celsius)"))
 ```
 
 Column{data-width = 500}
 -----------------------------------------------------------------------
 
-### Chart B
+### Distribution of Maximum Temperature (Celsius) in June in New York
 
 ```{r, echo = FALSE}
-
+ny_noaa %>%
+  filter(month == 6) %>%
+  mutate(year = as.factor(year)) %>%
+  plot_ly(y = ~tmax, color = ~year, type = "box", colors = "Set2") %>%
+  layout(xaxis = list(title = "Year"), yaxis = list(title = "Temperature (Celsius)"))
 ```
 
-### Chart C
+### Number of Days of Precipitation in 2010 by Month at one Location
 
 ```{r, echo = FALSE}
-
+ny_noaa %>%
+  filter(year == 2010, prcp != 0, id == "USC00300023") %>%
+  mutate(month = month.abb[month],
+         month = as.factor(month), 
+         month = factor(month, labels = c("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"))) %>%
+  group_by(month) %>%
+  summarize(n = n()) %>%
+  plot_ly(x = ~month, y = ~n, color = ~month, type = "bar", colors = "Set2") %>%
+  layout(xaxis = list(title = "Month"), yaxis = list(title = "Number of Days"))
 ```
 
