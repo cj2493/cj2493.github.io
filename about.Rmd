@@ -7,4 +7,3 @@ editor_options:
 
 This site was created through R Markdown and is hosted on github.
 
-The data used for the flex dashboard was collected on airbnb rentals in New York City. The data was subset to rentals that had a rating and had prices between \$100 and \$500 per night.

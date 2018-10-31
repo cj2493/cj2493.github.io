@@ -12,7 +12,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-library(p8105.datasets)
 library(viridis)
 library(plotly)
 ```
@@ -20,48 +19,31 @@ library(plotly)
 
 
 ```{r, echo = FALSE}
-data(nyc_airbnb) 
-nyc_airbnb = nyc_airbnb %>%
-  janitor::clean_names() %>%
-  mutate(rating = review_scores_location/2) %>%
-  rename(borough = neighbourhood_group) %>%
-  select(borough, neighbourhood, latitude, longitude, room_type, price, rating) %>%
-  filter(!is.na(rating),
-         price %in% 100:500
-         )
+ny_noaa = read_csv("./data/nynoaadat.csv") 
+
 ```
 
 Column{data-width = 500}
 -----------------------------------------------------------------------
 
-### Price and Rating by Location
+### Chart A
 
 ```{r, echo = FALSE}
-nyc_airbnb  %>%
-  mutate(text_label = str_c("Price: $", price, '\nRating: ', rating, '\nBorough: ', borough)) %>%
-  plot_ly(x = ~longitude, y = ~latitude, type = "scatter", mode = "markers",
-          alpha = 0.5, 
-          color = ~price,
-          text = ~text_label)
+
 ```
 
 Column{data-width = 500}
 -----------------------------------------------------------------------
 
-### Rating Distribution by Borough
+### Chart B
 
 ```{r, echo = FALSE}
-nyc_airbnb %>%
-  plot_ly(y = ~rating, color = ~borough, type = "box")
+
 ```
 
-### Number of 5-Star Airbnbs in Brooklyn by Neighbourhood
+### Chart C
 
 ```{r, echo = FALSE}
-nyc_airbnb %>%
-  filter(rating == 5, borough == "Brooklyn") %>%
-  count(neighbourhood) %>%
-  mutate(neighbourhood = fct_reorder(neighbourhood, n)) %>%
-  plot_ly(x = ~neighbourhood, y = ~n, color = ~neighbourhood, type = "bar")
+
 ```
 
