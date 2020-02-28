@@ -6,7 +6,7 @@ navbar:
     - text: "About"
       href: about.html
     - text: "Resume"
-      href: ./resume.pdf
+      href: ./CJohnson_Resume_2020.pdf
     - text: "LinkedIn"
       href: http://www.linkedin.com/in/courtney-johnson-734072a8
     - text: "Flex Dashboard"
